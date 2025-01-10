@@ -26,16 +26,22 @@ public class Singly{
         System.out.println("null");
 
     }
-    public void count(){
+    public int length(){
+
+        if (head == null) {
+            return 0;
+            
+        }
         int count=0;
         ListNode current = head;
         while (current!=null) {
           count++;
           current=current.next;
-          System.out.print(count);
+          
 
 
         }
+        return count;
     }
     public static void main(String[] args) {
         Singly sll = new Singly();
@@ -49,6 +55,6 @@ public class Singly{
         // print
          
         sll.printList();
-        sll.count();
+       System.out.println("the length of the list is" + " " + sll.length());
     }
 }
