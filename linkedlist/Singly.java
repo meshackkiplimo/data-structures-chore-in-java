@@ -10,6 +10,18 @@ public class Singly{
             this.data=data;
             this.next=null;
         }
+        
+        
+    }
+    public void printList(){
+        ListNode current = head;
+        while (current!=null) {
+            System.out.print(current.data+"->");
+            current=current.next;
+            
+        }
+        System.out.println("null");
+
     }
     public static void main(String[] args) {
         Singly sll = new Singly();
@@ -21,5 +33,7 @@ public class Singly{
         second.next=third;
         third.next=fourth;
         // print
+         
+        sll.printList();
     }
 }
