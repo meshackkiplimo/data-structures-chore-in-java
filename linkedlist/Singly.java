@@ -43,6 +43,15 @@ public class Singly{
         }
         return count;
     }
+    public int insertAtFirst(int value){
+        ListNode newNode = new ListNode(value);
+        newNode.next=head;
+
+        head=newNode;
+        return head.data;
+
+    }
+   
     public static void main(String[] args) {
         Singly sll = new Singly();
         sll.head = new ListNode(10);
@@ -56,5 +65,8 @@ public class Singly{
          
         sll.printList();
        System.out.println("the length of the list is" + " " + sll.length());
+       sll.insertAtFirst(100);
+              sll.printList();
+
     }
 }
