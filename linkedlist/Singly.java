@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Singly{
 
 
@@ -14,6 +16,7 @@ public class Singly{
         
     }
     public void printList(){
+
         ListNode current = head;
         while (current!=null) {
             System.out.print(current.data+"->");
@@ -22,6 +25,17 @@ public class Singly{
         }
         System.out.println("null");
 
+    }
+    public void count(){
+        int count=0;
+        ListNode current = head;
+        while (current!=null) {
+          count++;
+          current=current.next;
+          System.out.print(count);
+
+
+        }
     }
     public static void main(String[] args) {
         Singly sll = new Singly();
@@ -35,5 +49,6 @@ public class Singly{
         // print
          
         sll.printList();
+        sll.count();
     }
 }
